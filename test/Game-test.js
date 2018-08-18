@@ -25,7 +25,7 @@ describe('Game', () => {
     assert.isArray(blocks);
   }) 
   it('should instantiate a new block inside the canvas', () => {
-    let block = new Block(70, 100, 10, 10, 'red', 'black')
+    let block = new Block(70, 100, 10, 10, 'red', 1, 1, 'black')
     assert.deepEqual(block, {
       x: 70,
       y: 100,
@@ -44,7 +44,7 @@ describe('Game', () => {
     assert.isArray(cars);
   }) 
   it('should instantiate a new car inside the canvas', () => {
-    let car = new Car(70, 100, 10, 10, 'red', 'black')
+    let car = new Car(70, 100, 10, 10, 'red', 1, 1, 'black')
     assert.deepEqual(car, {
       x: 70,
       y: 100,
@@ -63,13 +63,13 @@ describe('Game', () => {
     assert.isObject(frog);
   })
   it ('should move a block in a direction', () => {
-    let block = new Block(70, 100, 10, 10, 'red', 'black')
+    let block = new Block(70, 100, 10, 10, 1, 1, 'red', 'black')
     block.move()
     assert.isTrue(block.x !== 70) 
     assert.isTrue(block.dx === 1)
   })   
   it ('should move a car in a direction', () => {
-    let car = new Car(70, 100, 10, 10, 'red', 'black')
+    let car = new Car(70, 100, 10, 10, 1, 1, 'red', 'black')
     car.move()
     assert.isTrue(car.x !== 70) 
     assert.isTrue(car.dx === 1)
