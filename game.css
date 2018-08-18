@@ -7,3 +7,11 @@
 body {
   background-color: gray;
 }
+
+.lives {
+  border: 1px solid;
+}
+
+.score {
+  border: 1px solid;
+}
