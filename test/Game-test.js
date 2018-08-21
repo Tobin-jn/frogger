@@ -157,34 +157,52 @@ it('should move the frog to the bottom after the frog jumps on the lillypad', ()
     let event = { 
       key: 'p'
     };
-    console.log(game.paused)
     game.handleKeyPress(event)
-    console.log(game.paused)
-    
     assert.equal(game.paused, true);
  })
- 
 
- //isOver
+ it('should take a life when the frog collides with the car', () => {
+   let game = new Game();
+    game.frogs.x = 100;
+   game.frogs.y = 345;
+   game.killFrog()
+   console.log(game)
+   assert.equal(game.lives, 2)
+  assert.equal(game.frogs.x, 286);
+  assert.equal(game.frogs.y, 565);
+ })
 
- //killfrog
-
-  //loopBlocks
   it('should move a block in a direction', () => {
     let block = new Block(70, 100, 10, 10, 1, 1, 'red', 'black')
     block.move()
     assert.isTrue(block.x !== 70) 
     assert.isTrue(block.dx === 1)
   })  
-  //loopCars 
+
   it ('should move a car in a direction', () => {
     let car = new Car(70, 100, 10, 10, 1, 1, 'red', 'black')
     car.move()
     assert.isTrue(car.x !== 70) 
     assert.isTrue(car.dx === 1)
+  })
+
+  it('should change frog direction to the log direction when it jumps on', () => {
+    let game = new Game();
+    game.frogs.x = 37;
+    game.frogs.y = 75;
+    game.moveFrogOnLog()
+    assert.equal(game.frogs.dx, 1)
   }) 
 
-//loseLives
+    it('should change frog speed to the log speed when it jumps on', () => {
+    let game = new Game();
+    game.frogs.x = 37;
+    game.frogs.y = 75;
+    game.moveFrogOnLog()
+    assert.equal(game.frogs.dxv, 1)
+  }) 
+
+
 
 //movefrog on log
 
