@@ -7,24 +7,21 @@
   <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
 </head>
 <body>
-
-  <h1>Frogger</h1>
-
-  <div class="flex-wrapper-top">
-    <h2 class="level-text">Level</h2>
-    <p class="level">1</p>
-    <h2 class="lives-text">Number of Lives</h2>
-    <p class="lives">3</p>
-  </div>
-
-  <canvas id="game" width="600" height="600" style="background: url('./images/frogger_background.png')"></canvas>
-
-  <div class="flex-wrapper-bottom">
-    <button type="button">New Game</button>
-    <h2 class="score-text">Score</h2>
-    <p class="score">0</p>
-  </div>
-
+  <article>
+    <h1>Fr<img class="frog-icon" src="images/frog.png" alt="Frog Icon">gger</h1>
+    <div class="flex-wrapper-top">
+      <h2 class="level-text">Level</h2>
+      <p class="level">1</p>
+      <h2 class="lives-text">Number of Lives</h2>
+      <p class="lives">3</p>
+    </div>
+    <canvas id="game" width="600" height="600" style="background: url('./images/frogger_background.png')"></canvas>
+    <div class="flex-wrapper-bottom">
+      <button type="button">New Game</button>
+      <h2 class="score-text">Score</h2>
+      <p class="score">0</p>
+    </div>
+  </article>
   <script src="main.bundle.js"></script>
 </body>
 </html>
