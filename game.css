@@ -5,17 +5,91 @@
 }
 
 body {
-  background-color: gray;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Rammetto One', cursive;
 }
 
-.lives {
-  border: 1px solid;
+h1 {
+  font-size: 1.5em;
+
 }
 
-.score {
-  border: 1px solid;
+p {
+  margin: 0px;
+  text-align: center;
+}
+
+.flex-wrapper-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 25px;
+}
+
+.level-text {
+  width: 60px;
+  margin: 0px;
+  font-size: 1.4em;
+
 }
 
 .level {
-  border: 1px solid;
+  width: 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.lives-text {
+  margin: 0px;
+  width: 170px;
+  margin-left: 295px;
+    font-size: 1.4em;
+}
+.lives {
+  width: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+
+.flex-wrapper-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 45px;
+}
+
+button {
+  color: #0099CC;
+  background: transparent;
+  border: 2px solid #0099CC;
+  border-radius: 15px;
+  color: black;
+  padding: 0px 32px;
+  font-size: 1.3em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+ button:hover {
+  background-color: #008CBA;
+  color: white;
+ }
+
+
+.score-text {
+  width: 60px;
+  font-size: 1.5em;
+  margin: 10px 0px 0px 324px;
+}
+
+
+.score {
+  width: 85px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
 }
