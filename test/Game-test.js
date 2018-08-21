@@ -62,22 +62,57 @@ describe('Game', () => {
     let frog = new Frog();
     assert.isObject(frog);
   })
-  it ('should move a block in a direction', () => {
-    let block = new Block(70, 100, 10, 10, 1, 1, 'red', 'black')
-    block.move()
-    assert.isTrue(block.x !== 70) 
-    assert.isTrue(block.dx === 1)
-  })   
-  it ('should move a car in a direction', () => {
-    let car = new Car(70, 100, 10, 10, 1, 1, 'red', 'black')
-    car.move()
-    assert.isTrue(car.x !== 70) 
-    assert.isTrue(car.dx === 1)
-  }) 
+//collide with walls
+  // it('should lose a life if the frog hits the wall', () => {
+  //   let game = new Game();
+  //   let frog = new Frog(10, 700);
+  //   let lives = game.lives
+  //   game.animate()
+  //   assert.equal(game.lives, 2)
 
- // it('should end game', () => {})
- // isOver()
- // togglePause
+  // })
+
+//add level
+it('should increase speed of car if level is increased to 2', () => {
+  let game = new Game();
+  game.addLvl();
+  assert.equal(game.cars[0].dxv, 2);
+})
+
+
+
+//end game
+it('should end the game when gameOver is true', () => {
+  let game = new Game();
+  game.endGame()
+  assert.equal(game.gameOver, true)
+})
+
+//frog on lillypad
+it('should change a lillypad color to lime when frog jumps on the lillypad', () => {
+  let game = new Game();
+  game.frogs.x = 20
+  game.frogs.y = 35
+  game.frogOnLillypad();
+  assert.equal(game.lillypads[0].color, 'lime');
+})
+
+it('should add 100 to the score when frog jumps on the lillypad', () => {
+  let game = new Game();
+  game.frogs.x = 20
+  game.frogs.y = 35
+  game.frogOnLillypad();
+  assert.equal(game.score, 100);
+})
+
+it('should move the frog to the bottom after the frog jumps on the lillypad', () => {
+  let game = new Game();
+  game.frogs.x = 20
+  game.frogs.y = 35
+  game.frogOnLillypad();
+  assert.equal(game.frogs.x, 286);
+  assert.equal(game.frogs.y, 565);
+})
 
  it ('should move right when right arrow is pressed', () => {
     let game = new Game();
@@ -106,6 +141,7 @@ describe('Game', () => {
     game.handleKeyPress(event)
     assert.equal(frog.y + 30, 130)
  })
+
  it ('should move down when down arrow is pressed', () => {
     let game = new Game();
     let frog = new Frog(10, 100);
@@ -116,14 +152,53 @@ describe('Game', () => {
     assert.equal(frog.y - 30, 70)
  })
 
-
-
-
-
-
-  // it('should take properties', () => {})
+ it('should pause the game when p is pressed', () => {
+    let game = new Game();
+    let event = { 
+      key: 'p'
+    };
+    console.log(game.paused)
+    game.handleKeyPress(event)
+    console.log(game.paused)
+    
+    assert.equal(game.paused, true);
+ })
  
-  // it('should collide with walls', () => {})
-  // it('should be able to move', () => {})
-  // it('should be able to changeDirection', () => {})
+
+ //isOver
+
+ //killfrog
+
+  //loopBlocks
+  it('should move a block in a direction', () => {
+    let block = new Block(70, 100, 10, 10, 1, 1, 'red', 'black')
+    block.move()
+    assert.isTrue(block.x !== 70) 
+    assert.isTrue(block.dx === 1)
+  })  
+  //loopCars 
+  it ('should move a car in a direction', () => {
+    let car = new Car(70, 100, 10, 10, 1, 1, 'red', 'black')
+    car.move()
+    assert.isTrue(car.x !== 70) 
+    assert.isTrue(car.dx === 1)
+  }) 
+
+//loseLives
+
+//movefrog on log
+
+//move to next level
+
+//water death
+
+
+
+
+
+
+
+
+
+
 })
