@@ -152,7 +152,6 @@ describe('Game', () => {
     game.frogs.x = 100;
     game.frogs.y = 345;
     game.killFrog()
-    console.log(game)
     assert.equal(game.lives, 2)
     assert.equal(game.frogs.x, 286);
     assert.equal(game.frogs.y, 565);
