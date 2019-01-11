@@ -10,12 +10,14 @@ Press *P* to pause game
 
 [Frogger](https://benjaminhayek.github.io/game-time/) on Github Pages
 
-### Primary JavaScript Technologies Used
+### Tech Stack
 
 * Build using Object Oriented Programming design principles
 * JavaScript ES6
 * jQuery
 * HTML Canvas
+* Mocha
+* Chai
 
 ### Screenshots
 
@@ -41,7 +43,7 @@ Run with ```npm test``` from the root directory
 
 ### Original Assignment
 
-Game Time from the Turing School of Software & Design (project discontinued, rubric/specs unavailable)
+Game Time from the [Turing School of Software & Design](https://turing.io/) (project discontinued, rubric/specs unavailable)
 
 ### Contributors
 
