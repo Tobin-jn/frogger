@@ -1,5 +1,6 @@
 # Frogger
 
+### About 
 Frogger recreates the classic arcade game of the 1980's **Frogger**. Players need to navigate the obstacles to land on a lillypad at the top of the screen. The bottom half of the screen are Cars that need to be dodged. The upper half are Logs the frog needs to jump on to successfully cross the river. A life is lost if the frog is hit by a car or falls in the river.  Points are gained with each jump forward and by successfully navigating the obstacles by landing on a lillypad. When all 5 lillypads have been reached, the player proceeds to level 2. 
 
 Players have three lives
